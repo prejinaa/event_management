@@ -12,19 +12,20 @@ public class GlobalExceptionHandler extends Throwable {
 
     @ExceptionHandler(EventNotFound.class)
     public ResponseEntity<ErrorResponse> handleEventNotFoundException(EventNotFound ex) {
-        ErrorResponse errorResponse = new ErrorResponse("Resource not found", ex.getMessage());
-        return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+         ErrorResponse errorResponse = new ErrorResponse("Resource not found", ex.getMessage());
+         return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
     }
+
     @ExceptionHandler(EventAlreadyExist.class)
     public ResponseEntity<ErrorResponse> handleEventAlreadyExist(EventAlreadyExist ex) {
-        ErrorResponse errorResponse = new ErrorResponse("Resource not found", ex.getMessage());
-        return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
+          ErrorResponse errorResponse = new ErrorResponse("Resource not found", ex.getMessage());
+          return new ResponseEntity<>(errorResponse, HttpStatus.CONFLICT);
     }
 
 
     @ExceptionHandler(java.lang.Exception.class)
     public ResponseEntity<ErrorResponse> handleGeneralException(java.lang.Exception ex) {
-        ErrorResponse errorResponse = new ErrorResponse("Internal Server Error", ex.getMessage());
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+          ErrorResponse errorResponse = new ErrorResponse("Internal Server Error", ex.getMessage());
+          return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

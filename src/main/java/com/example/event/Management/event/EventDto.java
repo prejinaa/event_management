@@ -22,7 +22,7 @@ public class EventDto {
    private String location;
    @NotBlank(message = "the description should not be blank")
    private  String description;
-   @NonNull
+   @NotBlank
    private String organizer;
 
 
