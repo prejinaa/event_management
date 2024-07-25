@@ -1,6 +1,9 @@
 package com.example.event.Management.auth;
+
 import com.example.event.Management.config.JwtTokenUtil;
+
 import com.example.event.Management.user.Role;
+import com.example.event.Management.user.RoleRepo;
 import com.example.event.Management.user.User;
 import com.example.event.Management.user.UserRepo;
 import lombok.RequiredArgsConstructor;
@@ -14,9 +17,8 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.Objects;
-import java.util.Optional;
-
 
 @Service
 @RequiredArgsConstructor
@@ -26,18 +28,28 @@ public class AuthService {
     private final JwtTokenUtil jwtTokenUtil;
     private final UserDetailsService userDetailsService;
     private final UserRepo userRepo;
+    private final RoleRepo roleRepo;
     private final PasswordEncoder passwordEncoder;
 
-    public ResponseEntity<?> registerUser(RegisterRequest registerRequest) {
-        Optional<User> existingUser = userRepo.findByUsername(registerRequest.getUsername());
-        if (existingUser.isPresent()) {
+    public ResponseEntity<?> registerUser(User user) {
+        User existingUser = userRepo.findByUsername(user.getUsername());
+        if (existingUser != null) {
             return ResponseEntity.badRequest().body("Username already exists");
         }
 
         User newUser = new User();
-        newUser.setUsername(registerRequest.getUsername());
-        newUser.setPassword(passwordEncoder.encode(registerRequest.getPassword()));
-        newUser.setRoles(Role); // Set default role using the enum
+        newUser.setUsername(user.getUsername());
+        newUser.setPassword(passwordEncoder.encode(user.getPassword()));
+
+        // Fetch the default ROLE_USER
+        Role defaultRole = roleRepo.findByName("ROLE_USER");
+        if (defaultRole == null) {
+            // Create and save ROLE_USER if it does not exist
+            defaultRole = new Role();
+            defaultRole.setName("ROLE_USER");
+            roleRepo.save(defaultRole);
+        }
+        newUser.setRoles(Collections.singletonList(defaultRole));
 
         userRepo.save(newUser);
         return ResponseEntity.ok("User registered successfully");
@@ -65,3 +77,4 @@ public class AuthService {
         }
     }
 }
+

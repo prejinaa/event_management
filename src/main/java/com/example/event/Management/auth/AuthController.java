@@ -1,29 +1,26 @@
 package com.example.event.Management.auth;
 
+
+
+import com.example.event.Management.user.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-
 @RequiredArgsConstructor
-
 public class AuthController {
-    private final AuthService service;
+
+    private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> register(
-            @RequestBody RegisterRequest registerRequest
-    ) {
-        return service.registerUser(registerRequest);
+    public ResponseEntity<?> registerUser(@RequestBody User user) {
+        return authService.registerUser(user);
     }
 
-    @PostMapping("/authentication")
-    public ResponseEntity<?> authentication(
-            @RequestBody AuthRequest authRequest
-    ) throws Exception {
-        return ResponseEntity.ok(service.createAuthenticationToken(authRequest));
+    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthRequest authRequest) throws Exception {
+        return authService.createAuthenticationToken(authRequest);
     }
 }
+

@@ -5,9 +5,12 @@ package com.example.event.Management.config;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.authentication.configuration.EnableGlobalAuthentication;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
@@ -19,6 +22,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 
 @RequiredArgsConstructor
+@EnableWebSecurity
+@EnableMethodSecurity
+
 public class SecurityConfiguration {
 
     private final JwtAuthenticationFilter jwtAuthFilter;
@@ -37,10 +43,11 @@ public class SecurityConfiguration {
                http.csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(
-                        auth -> auth.requestMatchers("/register","/authentication").permitAll()
-                                .requestMatchers("api/v1/event/**").hasRole("ADMIN")
+                        auth -> auth.requestMatchers("/register","/authenticate").permitAll()
+                                .requestMatchers("api/v1/event/**").hasAnyRole("USER","ADMIN")
+
                                 .requestMatchers("api/v1/admin/**").hasRole("ADMIN")
-                                .requestMatchers("api/v1/user/**").hasAnyRole("USER","ADMIN")
+                                .requestMatchers("api/v1/user/**").hasAnyRole("USER")
 
                                 .anyRequest().authenticated());
 
