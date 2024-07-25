@@ -22,7 +22,8 @@ public class EventServiceImpl implements EventService {
 
 
     @Override
-    public EventDto createEvent(EventDto eventDto) {
+    public EventDto createEvent(EventDto eventDto)
+    {
         Event event = EventMapper.mapToEvent(eventDto);
 
         Event createEvent = eventRepo.save(event);
@@ -30,7 +31,8 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-    public EventDto getById(long id) {
+    public EventDto getById(long id)
+    {
         Event events = eventRepo.findById(id).orElseThrow(() ->
                 new EventNotFound("The event is not exist with this event" + id));
         return EventMapper.mapToEventDto(events);
@@ -39,32 +41,26 @@ public class EventServiceImpl implements EventService {
 
 
     @Override
-    public List<EventDto> getEvent() {
-//        Sort sort = Sort.by(Sort.Direction.fromString(sortDirection), sortBy);
-//        Pageable pageable=PageRequest.of(pageNo,pageSize);
-//        Page<Event>page=eventRepo.findAll(pageable);
-
+    public List<EventDto> getEvent()
+    {
         List<Event> events = eventRepo.findAll();
          return events.stream().map((even) -> EventMapper.mapToEventDto(even)).collect(Collectors.toList());
-       // return page.getContent().stream().map(EventMapper::mapToEventDto).collect(Collectors.toList());
-
     }
 
     @Override
-    public void deleteEvent(long id) {
-        Event event = eventRepo.findById(id).orElseThrow(()
-                -> new EventNotFound("Event with this Id " + id + " Not found"));
-
+    public void deleteEvent(long id)
+    {
+        Event event = eventRepo.findById(id).orElseThrow(() ->
+                new EventNotFound("Event with this Id " + id + " Not found"));
         eventRepo.deleteById(id);
-        ;
-
 
     }
 
     @Override
     public EventDto updateEvent(long id, EventDto eventDto) throws EventNotFound {
         Optional<Event> retrieveEvent = eventRepo.findById(id);
-        if (retrieveEvent.isEmpty()) {
+        if (retrieveEvent.isEmpty())
+        {
             throw new EventNotFound("Book with this id" + id + "not found");
         }
 
@@ -78,15 +74,14 @@ public class EventServiceImpl implements EventService {
     }
 
     @Override
-
-
-    public Page<EventDto> findAll(int pageNo, int pageSize, String sortBy, String sortDirection) {
+    public Page<EventDto> findAll(int pageNo, int pageSize, String sortBy, String sortDirection)
+    {
             Sort sort = sortDirection.equalsIgnoreCase(Sort.Direction.ASC.name()) ? Sort.by(sortBy).ascending()
                     : Sort.by(sortBy).descending();
             Pageable pageable = PageRequest.of(pageNo, pageSize, sort);
             Page<Event> page = eventRepo.findAll(pageable);
             return page.map(EventMapper::mapToEventDto);
-        }
     }
+}
 
 

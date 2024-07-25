@@ -19,9 +19,8 @@ import java.util.Map;
 import java.util.function.Function;
 
 @Component
-
 public class JwtTokenUtil implements Serializable {
-    //here we create an validate token from UserCrenditanal
+    //here we create an validate token from UserCredential
 
     @Serial
     private static final long serialVersionUID = 464214880478737476L;

@@ -20,33 +20,37 @@ import java.io.IOException;
 @RequiredArgsConstructor
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
-    private final JwtUserDetailService jwtUserDetailService;
-    private final JwtTokenUtil jwtTokenUtil;
+      private final JwtUserDetailService jwtUserDetailService;
+       private final JwtTokenUtil jwtTokenUtil;
 
 
     @Override
-    protected void doFilterInternal(@NonNull HttpServletRequest request,
-                                    @NonNull HttpServletResponse response,
-                                    @NonNull FilterChain filterChain)
-            throws ServletException, IOException {
-        final String requestTokenHeader= request.getHeader("Authorization");
-        String username=null;
-        String jwtToken=null;
+    protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response,
+                                    @NonNull FilterChain filterChain) throws ServletException, IOException
+    {
+        final String requestTokenHeader = request.getHeader("Authorization");
+        String username = null;
+        String jwtToken = null;
+
         //check if the token is start with bearer and have not null
         if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
             jwtToken = requestTokenHeader.substring(7);
             try {
                 username = jwtTokenUtil.getUsernameFromToken(jwtToken);
-            } catch (IllegalArgumentException e) {
+                 }
+            catch (IllegalArgumentException e)
+                {
                 System.out.println("Unable to get JWT Token");
-            } catch (ExpiredJwtException e) {
+                 }
+            catch (ExpiredJwtException e)
+                {
                 System.out.println("JWT Token has expired");
-            }
+                }
 
             // Once we get the token validate it.
             if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 
-                UserDetails userDetails = this.jwtUserDetailService. loadUserByUsername(username);
+                UserDetails userDetails = this.jwtUserDetailService.loadUserByUsername(username);
 
                 // if token is valid configure Spring Security to manually set authentication
                 if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {

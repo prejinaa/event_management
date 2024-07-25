@@ -22,22 +22,28 @@ import java.util.Map;
 public class EventController {
     private final EventService eventService;
     private final EventRepo eventRepo;
+
     @PreAuthorize("hasRole('ROLE_USER')or hasRole('ROLE_ADMIN')")
     @PostMapping(value = "/post")
-    public ResponseEntity<EventDto> createEvent(@Valid @RequestBody EventDto eventDto) {
+    public ResponseEntity<EventDto> createEvent(@Valid @RequestBody EventDto eventDto)
+    {
         EventDto createEvent = eventService.createEvent(eventDto);
         return new ResponseEntity<>(createEvent, HttpStatus.CREATED);
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN')")
     @GetMapping(value = "/{eventId}")
     public ResponseEntity<EventDto> getById(@PathVariable("eventId") Long id) throws EventNotFound {
         try {
-            EventDto event = eventService.getById(id);
-            return new ResponseEntity<>(event, HttpStatus.OK);
-        } catch (EventNotFound eventNotFound) {
+              EventDto event = eventService.getById(id);
+               return new ResponseEntity<>(event, HttpStatus.OK);
+            }
+        catch (EventNotFound eventNotFound)
+           {
             throw eventNotFound;
-        }
+           }
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN)" )
     @GetMapping("/get")
     public ResponseEntity<List<EventDto>> getEvent() {
@@ -45,6 +51,7 @@ public class EventController {
         return new ResponseEntity<>(events, HttpStatus.OK);
 
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN') ")
     @GetMapping
     public ResponseEntity<Map<String, Object>> findAll(
@@ -62,20 +69,21 @@ public class EventController {
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
+
     @PreAuthorize("hasRole('ROLE_ADMIN') ")
     @DeleteMapping(value = "/{eventId}")
-    public ResponseEntity<HttpStatus> deleteEvent(@PathVariable("eventId") Long id)
-            throws EventNotFound {
+    public ResponseEntity<HttpStatus> deleteEvent(@PathVariable("eventId") Long id) throws EventNotFound
+    {
         eventService.deleteEvent(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-
-
     }
-    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
 
+
+    @PreAuthorize("hasRole('ROLE_ADMIN') or hasRole('ROLE_USER')")
     @PutMapping(value = "/{eventId}")
     public ResponseEntity<EventDto> updateEvent(@PathVariable("eventId") Long id, @RequestBody EventDto eventDto)
-            throws EventNotFound {
+            throws EventNotFound
+    {
         EventDto eventDto1 = eventService.updateEvent(id, eventDto);
         return new ResponseEntity<>(eventDto1, HttpStatus.OK);
 

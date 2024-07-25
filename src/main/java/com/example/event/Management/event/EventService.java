@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 public interface EventService {
+
     EventDto createEvent(EventDto eventDto);
 
     EventDto getById(long id);

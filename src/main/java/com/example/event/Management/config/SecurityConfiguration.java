@@ -45,16 +45,10 @@ public class SecurityConfiguration {
                 .authorizeHttpRequests(
                         auth -> auth.requestMatchers("/register","/authenticate").permitAll()
                                 .requestMatchers("api/v1/event/**").hasAnyRole("USER","ADMIN")
-
                                 .requestMatchers("api/v1/admin/**").hasRole("ADMIN")
                                 .requestMatchers("api/v1/user/**").hasAnyRole("USER")
-
                                 .anyRequest().authenticated());
-
-
-
-
-        http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
-        return http.build();
+               http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+              return http.build();
     }
 }
