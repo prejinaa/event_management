@@ -42,11 +42,11 @@ public class AuthService {
         newUser.setPassword(passwordEncoder.encode(user.getPassword()));
 
         // Fetch the default ROLE_USER
-        Role defaultRole = roleRepo.findByName("ROLE_USER");
+        Role defaultRole = roleRepo.findByName("ROLE_ADMIN");
         if (defaultRole == null) {
             // Create and save ROLE_USER if it does not exist
             defaultRole = new Role();
-            defaultRole.setName("ROLE_USER");
+            defaultRole.setName("ROLE_ADMIN");
             roleRepo.save(defaultRole);
         }
         newUser.setRoles(Collections.singletonList(defaultRole));

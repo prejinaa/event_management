@@ -11,12 +11,14 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@RequestBody User user) {
+    public ResponseEntity<?> registerUser(@RequestBody User user)
+    {
         return authService.registerUser(user);
     }
 
     @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthRequest authRequest) throws Exception {
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthRequest authRequest) throws Exception
+    {
         return authService.createAuthenticationToken(authRequest);
     }
 }

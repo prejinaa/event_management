@@ -2,10 +2,10 @@ package com.example.event.Management.user;
 
 import com.example.event.Management.event.Event;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import lombok.*;
+import org.hibernate.engine.internal.ImmutableEntityEntry;
 
 import java.util.List;
 
@@ -19,7 +19,9 @@ public class User{
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long userId;
+@Email
 private String username;
+@NonNull
 private String password;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(

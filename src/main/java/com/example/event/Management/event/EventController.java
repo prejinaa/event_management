@@ -45,7 +45,7 @@ public class EventController {
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN)" )
-    @GetMapping("/get")
+    @GetMapping
     public ResponseEntity<List<EventDto>> getEvent() {
         List<EventDto> events = eventService.getEvent();
         return new ResponseEntity<>(events, HttpStatus.OK);
@@ -53,7 +53,7 @@ public class EventController {
     }
 
     @PreAuthorize("hasRole('ROLE_ADMIN') ")
-    @GetMapping
+    @GetMapping("/get")
     public ResponseEntity<Map<String, Object>> findAll(
             @RequestParam(defaultValue = "0") int pageNo,
             @RequestParam(defaultValue = "10") int pageSize,

@@ -47,6 +47,7 @@ public class SecurityConfiguration {
                                 .requestMatchers("api/v1/event/**").hasAnyRole("USER","ADMIN")
                                 .requestMatchers("api/v1/admin/**").hasRole("ADMIN")
                                 .requestMatchers("api/v1/user/**").hasAnyRole("USER")
+                                .requestMatchers("api/v1/**").hasRole("ADMIN")
                                 .anyRequest().authenticated());
                http.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
               return http.build();
