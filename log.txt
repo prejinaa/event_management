@@ -1,0 +1,245 @@
+2024-07-30T16:45:38.775+05:45  INFO 24080 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Starting EventManagementApplication using Java 22.0.1 with PID 24080 (C:\Users\preji\OneDrive\Desktop\eventManagement\event_management\target\classes started by preji in C:\Users\preji\OneDrive\Desktop\eventManagement\event_management)
+2024-07-30T16:45:38.780+05:45 DEBUG 24080 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-30T16:45:38.782+05:45  INFO 24080 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:45:40.864+05:45  INFO 24080 --- [event-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-30T16:45:41.008+05:45  INFO 24080 --- [event-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 125 ms. Found 3 JPA repository interfaces.
+2024-07-30T16:45:42.383+05:45  INFO 24080 --- [event-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-30T16:45:42.410+05:45  INFO 24080 --- [event-Management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-30T16:45:42.410+05:45  INFO 24080 --- [event-Management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30T16:45:42.563+05:45  INFO 24080 --- [event-Management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-30T16:45:42.564+05:45  INFO 24080 --- [event-Management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3645 ms
+2024-07-30T16:45:42.853+05:45  INFO 24080 --- [event-Management] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-30T16:45:42.998+05:45  INFO 24080 --- [event-Management] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-30T16:45:43.089+05:45  INFO 24080 --- [event-Management] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-30T16:45:43.777+05:45  INFO 24080 --- [event-Management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-30T16:45:43.830+05:45  INFO 24080 --- [event-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-30T16:45:44.651+05:45  INFO 24080 --- [event-Management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22aefae0
+2024-07-30T16:45:44.654+05:45  INFO 24080 --- [event-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-30T16:45:44.783+05:45  WARN 24080 --- [event-Management] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-30T16:45:46.973+05:45  INFO 24080 --- [event-Management] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-30T16:45:47.191+05:45  INFO 24080 --- [event-Management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-30T16:45:47.799+05:45 DEBUG 24080 --- [event-Management] [main] c.e.e.M.config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-07-30T16:45:47.843+05:45 DEBUG 24080 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Creating the authentication manager bean
+2024-07-30T16:45:47.875+05:45 DEBUG 24080 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Creating the password Bean
+2024-07-30T16:45:47.889+05:45  INFO 24080 --- [event-Management] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name jwtUserDetailService
+2024-07-30T16:45:48.122+05:45  WARN 24080 --- [event-Management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-30T16:45:48.702+05:45 DEBUG 24080 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Configure SecurityFilterChain
+2024-07-30T16:45:49.195+05:45  INFO 24080 --- [event-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-30T16:45:49.210+05:45  INFO 24080 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Started EventManagementApplication in 11.959 seconds (process running for 12.943)
+2024-07-30T16:46:32.666+05:45  INFO 24080 --- [event-Management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-30T16:46:32.667+05:45  INFO 24080 --- [event-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-30T16:46:32.673+05:45  INFO 24080 --- [event-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2024-07-30T16:46:32.755+05:45  WARN 24080 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtAuthenticationFilter   : JWT Token does not begin with Bearer String
+2024-07-30T16:46:33.093+05:45  INFO 24080 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.auth.AuthController     : Entering registerUser () method with  user:puja@gmail.com
+2024-07-30T16:46:33.094+05:45  INFO 24080 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.auth.AuthController     : User register 
+2024-07-30T16:46:33.094+05:45 DEBUG 24080 --- [event-Management] [http-nio-8080-exec-2] c.e.event.Management.auth.AuthService    : Entering the RegisterUser() with  user:puja@gmail.com
+2024-07-30T16:46:33.606+05:45  WARN 24080 --- [event-Management] [http-nio-8080-exec-2] c.e.event.Management.auth.AuthService    : Username already exist with name:puja@gmail.com
+2024-07-30T16:47:03.025+05:45  INFO 24080 --- [event-Management] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-07-30T16:47:03.029+05:45  INFO 24080 --- [event-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-07-30T16:47:03.047+05:45  INFO 24080 --- [event-Management] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-07-30T16:47:06.906+05:45  INFO 10636 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Starting EventManagementApplication using Java 22.0.1 with PID 10636 (C:\Users\preji\OneDrive\Desktop\eventManagement\event_management\target\classes started by preji in C:\Users\preji\OneDrive\Desktop\eventManagement\event_management)
+2024-07-30T16:47:06.908+05:45 DEBUG 10636 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-07-30T16:47:06.909+05:45  INFO 10636 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : No active profile set, falling back to 1 default profile: "default"
+2024-07-30T16:47:08.200+05:45  INFO 10636 --- [event-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-07-30T16:47:08.335+05:45  INFO 10636 --- [event-Management] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 3 JPA repository interfaces.
+2024-07-30T16:47:09.739+05:45  INFO 10636 --- [event-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-07-30T16:47:09.773+05:45  INFO 10636 --- [event-Management] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-07-30T16:47:09.774+05:45  INFO 10636 --- [event-Management] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-07-30T16:47:09.908+05:45  INFO 10636 --- [event-Management] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-07-30T16:47:09.908+05:45  INFO 10636 --- [event-Management] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2936 ms
+2024-07-30T16:47:10.439+05:45  INFO 10636 --- [event-Management] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-07-30T16:47:10.759+05:45  INFO 10636 --- [event-Management] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-07-30T16:47:10.948+05:45  INFO 10636 --- [event-Management] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-07-30T16:47:11.807+05:45  INFO 10636 --- [event-Management] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-07-30T16:47:11.893+05:45  INFO 10636 --- [event-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-07-30T16:47:12.737+05:45  INFO 10636 --- [event-Management] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@485c84d7
+2024-07-30T16:47:12.755+05:45  INFO 10636 --- [event-Management] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-07-30T16:47:12.860+05:45  WARN 10636 --- [event-Management] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-07-30T16:47:14.407+05:45  INFO 10636 --- [event-Management] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-07-30T16:47:14.522+05:45  INFO 10636 --- [event-Management] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-07-30T16:47:15.035+05:45 DEBUG 10636 --- [event-Management] [main] c.e.e.M.config.JwtAuthenticationFilter   : Filter 'jwtAuthenticationFilter' configured for use
+2024-07-30T16:47:15.079+05:45 DEBUG 10636 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Creating the authentication manager bean
+2024-07-30T16:47:15.109+05:45 DEBUG 10636 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Creating the password Bean
+2024-07-30T16:47:15.123+05:45  INFO 10636 --- [event-Management] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name jwtUserDetailService
+2024-07-30T16:47:15.322+05:45  WARN 10636 --- [event-Management] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-07-30T16:47:15.816+05:45 DEBUG 10636 --- [event-Management] [main] c.e.e.M.config.SecurityConfiguration     : Configure SecurityFilterChain
+2024-07-30T16:47:16.358+05:45  INFO 10636 --- [event-Management] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-07-30T16:47:16.378+05:45  INFO 10636 --- [event-Management] [main] c.e.e.M.EventManagementApplication       : Started EventManagementApplication in 10.131 seconds (process running for 10.642)
+2024-07-30T16:47:27.559+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-07-30T16:47:27.559+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-07-30T16:47:27.560+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-07-30T16:47:27.589+05:45  WARN 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtAuthenticationFilter   : JWT Token does not begin with Bearer String
+2024-07-30T16:47:27.688+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.auth.AuthController     : Entering registerUser () method with  user:puja@gmail.com
+2024-07-30T16:47:27.688+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.auth.AuthController     : User register 
+2024-07-30T16:47:27.688+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.event.Management.auth.AuthService    : Entering the RegisterUser() with  user:puja@gmail.com
+2024-07-30T16:47:27.840+05:45  WARN 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.event.Management.auth.AuthService    : Username already exist with name:puja@gmail.com
+2024-07-30T16:47:55.926+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:47:55.956+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:47:55.957+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:ram@gmail.com
+2024-07-30T16:47:56.016+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:47:56.019+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: ram@gmail.com
+2024-07-30T16:47:56.019+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:47:56.021+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Token validation result: ram@gmail.com
+2024-07-30T16:47:56.022+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:47:56.022+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:47:56.027+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:48:11.674+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:11.678+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:48:11.678+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:ram@gmail.com
+2024-07-30T16:48:11.685+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:48:11.685+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: ram@gmail.com
+2024-07-30T16:48:11.685+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:11.687+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Token validation result: ram@gmail.com
+2024-07-30T16:48:11.687+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:48:11.687+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:11.688+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:48:11.690+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.auth.AuthController     : Entering createAuthenticationToken() with requester:puja@gmail.com
+2024-07-30T16:48:11.690+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.auth.AuthController     : successfully creation 
+2024-07-30T16:48:11.690+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.event.Management.auth.AuthService    : Entering Authenticate user name :puja@gmail.com
+2024-07-30T16:48:11.691+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.event.Management.auth.AuthService    : Authenticate user with:puja@gmail.com
+2024-07-30T16:48:11.794+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:48:11.799+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:48:11.872+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:48:11.876+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:48:11.876+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Generating token for user: puja@gmail.com
+2024-07-30T16:48:11.877+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Generating token with extra claims: {} for user: puja@gmail.com
+2024-07-30T16:48:11.877+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Building token with expiration time: 86400000 milliseconds
+2024-07-30T16:48:11.879+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:11.895+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.event.Management.auth.AuthService    : Authenticate successful with the user:puja@gmail.com
+2024-07-30T16:48:33.881+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:33.883+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:48:33.883+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:48:33.889+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:48:33.889+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: puja@gmail.com
+2024-07-30T16:48:33.889+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:33.893+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Token validation result: puja@gmail.com
+2024-07-30T16:48:33.893+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:48:33.893+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:33.895+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:48:48.656+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:48.658+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:48:48.658+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:48:48.663+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:48:48.663+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: puja@gmail.com
+2024-07-30T16:48:48.663+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:48.665+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Token validation result: puja@gmail.com
+2024-07-30T16:48:48.665+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:48:48.665+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:48:48.667+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:49:05.642+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:05.644+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:49:05.645+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:49:05.650+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:49:05.650+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: puja@gmail.com
+2024-07-30T16:49:05.650+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:05.652+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Token validation result: puja@gmail.com
+2024-07-30T16:49:05.652+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:49:05.652+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:05.653+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-1] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:49:13.780+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:13.782+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:49:13.782+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:puja@gmail.com
+2024-07-30T16:49:13.788+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:49:13.788+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: puja@gmail.com
+2024-07-30T16:49:13.788+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:13.791+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Token validation result: puja@gmail.com
+2024-07-30T16:49:13.791+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:49:13.791+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:13.793+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-2] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:49:36.132+05:45  WARN 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.M.config.JwtAuthenticationFilter   : JWT Token does not begin with Bearer String
+2024-07-30T16:49:36.134+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.auth.AuthController     : Entering createAuthenticationToken() with requester:dikshya@gmail.com
+2024-07-30T16:49:36.134+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.auth.AuthController     : successfully creation 
+2024-07-30T16:49:36.134+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.event.Management.auth.AuthService    : Entering Authenticate user name :dikshya@gmail.com
+2024-07-30T16:49:36.134+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.event.Management.auth.AuthService    : Authenticate user with:dikshya@gmail.com
+2024-07-30T16:49:36.134+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:49:36.140+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:49:36.222+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:49:36.224+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:49:36.225+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.config.JwtTokenUtil     : Generating token for user: dikshya@gmail.com
+2024-07-30T16:49:36.225+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.config.JwtTokenUtil     : Generating token with extra claims: {} for user: dikshya@gmail.com
+2024-07-30T16:49:36.225+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.config.JwtTokenUtil     : Building token with expiration time: 86400000 milliseconds
+2024-07-30T16:49:36.225+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:49:36.226+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-3] c.e.event.Management.auth.AuthService    : Authenticate successful with the user:dikshya@gmail.com
+2024-07-30T16:50:02.782+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:02.785+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:50:02.785+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:50:02.791+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:50:02.792+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:50:02.792+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:02.793+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:50:02.793+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:50:02.793+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:02.794+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-5] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:50:10.699+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:10.701+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:50:10.701+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:50:10.707+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:50:10.707+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:50:10.707+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:10.709+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:50:10.709+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:50:10.709+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:10.711+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:50:10.712+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.event.EventController   : Entering getEvent()
+2024-07-30T16:50:10.712+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.event.EventServiceImpl  : Entering getEvent()
+2024-07-30T16:50:10.742+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.event.EventServiceImpl  : Retrieved 12 events
+2024-07-30T16:50:10.743+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.event.EventController   : Events is retrieve successfully
+2024-07-30T16:50:10.743+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-7] c.e.e.Management.event.EventController   : Existing getEvent
+2024-07-30T16:50:58.880+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:58.882+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:50:58.883+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:50:58.888+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:50:58.888+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:50:58.889+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:58.890+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:50:58.890+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:50:58.890+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:50:58.893+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:50:58.918+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.event.EventController   : Entering createEvent() with eventDto: EventDto(id=null, name=Drawingcompetiotion, date=2024/7/27, location=Usa, description=Interested can participate, organizer=paradime company)
+2024-07-30T16:50:58.918+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.event.EventServiceImpl  : Entering createEvent() with eventDto: EventDto(id=null, name=Drawingcompetiotion, date=2024/7/27, location=Usa, description=Interested can participate, organizer=paradime company)
+2024-07-30T16:50:58.997+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.event.EventServiceImpl  : Event created successfully with ID: 20
+2024-07-30T16:50:58.997+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.event.EventController   : Event created successfully with ID: 20
+2024-07-30T16:50:58.997+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-6] c.e.e.Management.event.EventController   : Existing createEvent()
+2024-07-30T16:51:16.596+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:16.597+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:51:16.597+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:51:16.604+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:51:16.604+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:51:16.605+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:16.607+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:51:16.607+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:51:16.607+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:16.608+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:51:16.609+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.event.EventController   : Entering getById() with getId: 1
+2024-07-30T16:51:16.610+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.event.EventServiceImpl  : Entering getById() with getId: 1
+2024-07-30T16:51:16.623+05:45 ERROR 10636 --- [event-Management] [http-nio-8080-exec-4] c.e.e.Management.event.EventController   : EVent with this Id1 not found:The event is not exist with this event1
+2024-07-30T16:51:21.469+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:21.471+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:51:21.471+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:51:21.475+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:51:21.475+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:51:21.476+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:21.477+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:51:21.477+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:51:21.477+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:21.478+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:51:21.480+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.event.EventController   : Entering getById() with getId: 4
+2024-07-30T16:51:21.480+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.event.EventServiceImpl  : Entering getById() with getId: 4
+2024-07-30T16:51:21.486+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.event.EventServiceImpl  : Event with ID 4 retrieved successfully.
+2024-07-30T16:51:21.487+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.event.EventController   : Event with ID 4 retrieved successfully.
+2024-07-30T16:51:21.487+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-8] c.e.e.Management.event.EventController   : Existing GetById()
+2024-07-30T16:51:44.311+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:44.313+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtAuthenticationFilter   : Extract the user name from token:
+2024-07-30T16:51:44.314+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtUserDetailService      : Attempting to load user with username:dikshya@gmail.com
+2024-07-30T16:51:44.319+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtUserDetailService      : Successfully load user
+2024-07-30T16:51:44.319+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Validating token for user: dikshya@gmail.com
+2024-07-30T16:51:44.319+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:44.320+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Token validation result: dikshya@gmail.com
+2024-07-30T16:51:44.320+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Extracting claim from token
+2024-07-30T16:51:44.320+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.config.JwtTokenUtil     : Decoding and creating signing key from secret
+2024-07-30T16:51:44.323+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.M.config.JwtAuthenticationFilter   : Authenticate user
+2024-07-30T16:51:44.326+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.event.EventController   : Entering UpdateEvent() with eventId:4 and eventDto:EventDto(id=null, name=Boxcompetiotion, date=2024/8/27, location=kathamandu, description=Interested can participate, organizer=paradime company)
+2024-07-30T16:51:44.326+05:45 DEBUG 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.event.EventServiceImpl  : Entering updateEvent() with id: 4 and eventDto: EventDto(id=null, name=Boxcompetiotion, date=2024/8/27, location=kathamandu, description=Interested can participate, organizer=paradime company)
+2024-07-30T16:51:44.359+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.event.EventServiceImpl  : Event update with this id:4 successfully
+2024-07-30T16:51:44.360+05:45  INFO 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.event.EventController   : Event update with this id:4 successfully
+2024-07-30T16:51:44.360+05:45 TRACE 10636 --- [event-Management] [http-nio-8080-exec-9] c.e.e.Management.event.EventController   : Exiting updateEvent()
