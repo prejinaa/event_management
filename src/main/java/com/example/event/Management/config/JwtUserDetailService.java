@@ -4,6 +4,8 @@ package com.example.event.Management.config;
 import com.example.event.Management.user.User;
 import com.example.event.Management.user.UserRepo;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -21,11 +23,14 @@ import java.util.stream.Collectors;
 public class JwtUserDetailService implements UserDetailsService {
 
     private final UserRepo userRepo;
+    Logger logger= LoggerFactory.getLogger(JwtUserDetailService.class);
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        logger.debug("Attempting to load user with username:{}",username);
        User user= userRepo.findByUsername( username);
         if(user==null){
+            logger.error("user with this username:{} not found",username);
             throw  new UsernameNotFoundException("user  is not found");
         }
 
@@ -33,6 +38,7 @@ public class JwtUserDetailService implements UserDetailsService {
         Collection<SimpleGrantedAuthority> authorities = user.getRoles().stream()
                 .map(role -> new SimpleGrantedAuthority(role.getName()))
                 .collect(Collectors.toList());
+        logger.info("Successfully load user");
 
         return org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
                 .password(user.getPassword())

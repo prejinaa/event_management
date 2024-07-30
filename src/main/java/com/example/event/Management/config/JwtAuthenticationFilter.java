@@ -7,6 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,8 +22,10 @@ import java.io.IOException;
 @RequiredArgsConstructor
 
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
+    Logger logger= LoggerFactory.getLogger(JwtAuthenticationFilter.class);
       private final JwtUserDetailService jwtUserDetailService;
        private final JwtTokenUtil jwtTokenUtil;
+
 
 
     @Override
@@ -37,14 +41,15 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
             jwtToken = requestTokenHeader.substring(7);
             try {
                 username = jwtTokenUtil.getUsernameFromToken(jwtToken);
+                logger.debug("Extract the user name from token:");
                  }
             catch (IllegalArgumentException e)
                 {
-                System.out.println("Unable to get JWT Token");
-                 }
+                logger.error("Unable to get JWT Token");
+                }
             catch (ExpiredJwtException e)
                 {
-                System.out.println("JWT Token has expired");
+                logger.warn("JWT Token has expired");
                 }
 
             // Once we get the token validate it.
@@ -63,6 +68,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
                     // that the current user is authenticated. So it passes the Spring Security
                     // Configurations successfully.
                     SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+                    logger.debug("Authenticate user");
                 }
             }
 

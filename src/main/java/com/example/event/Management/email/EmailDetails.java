@@ -12,6 +12,7 @@ import lombok.Setter;
 
 
 public class EmailDetails {
+
     private String recipient;
     private String message;
     private String subject;

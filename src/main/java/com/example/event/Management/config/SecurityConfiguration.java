@@ -3,6 +3,8 @@ package com.example.event.Management.config;
 
 
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -26,19 +28,22 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableMethodSecurity
 
 public class SecurityConfiguration {
-
+    Logger logger= LoggerFactory.getLogger(SecurityConfiguration.class);
     private final JwtAuthenticationFilter jwtAuthFilter;
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
+       logger.debug("Creating the authentication manager bean");
         return authConfig.getAuthenticationManager();
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+        logger.debug("Creating the password Bean");
         return new BCryptPasswordEncoder();
     }
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        logger.debug("Configure SecurityFilterChain");
 
                http.csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

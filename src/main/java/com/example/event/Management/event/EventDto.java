@@ -13,6 +13,7 @@ import lombok.NonNull;
 
 public class EventDto {
 
+
    private Long id;
    @NonNull
    private String name;
